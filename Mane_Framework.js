@@ -89,6 +89,10 @@ const Mane = () => {
             m-class="my-button"
             m-event="click,changeTitle"
           >Change Title</button>
+          <button
+            m-class="my-button"
+            m-event="toggleClass"
+          >Alert</button>
           <div m-class="counter-box">
             <p>{{counter}}</p>
             <button
@@ -161,6 +165,9 @@ const Mane = () => {
     },
     counterDown: () => {
       this.set("counter", this.state.counter - 1);
+    },
+    alert: () => {
+      alert("Button Clicked");
     }
   });
 
