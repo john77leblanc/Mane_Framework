@@ -91,7 +91,7 @@ const Mane = () => {
           >Change Title</button>
           <button
             m-class="my-button"
-            m-event="toggleClass"
+            m-event="click,alert"
           >Alert</button>
           <div m-class="counter-box">
             <p>{{counter}}</p>
