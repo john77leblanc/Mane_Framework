@@ -60,6 +60,7 @@ const Mane = () => {
   this.state = {
     name: "My Template",
     counter: 0,
+    buttonName: "Alert"
   }
 
   //--------------------------------------------------
@@ -92,17 +93,18 @@ const Mane = () => {
           <button
             m-class="my-button"
             m-event="click,alert"
-          >Alert</button>
+          >{{buttonName}}</button>
           <div m-class="counter-box">
             <p>{{counter}}</p>
+            <p><b>Adjust Counter</b></p>
             <button
-              m-class="my-button"
+              m-class="my-button counter-button"
               m-event="click,counterUp"
-            >Counter Up</button>
+            >+</button>
             <button
-              m-class="my-button"
+              m-class="my-button counter-button"
               m-event="click,counterDown"
-            >Counter Down</button>
+            >-</button>
           </div>
         `;
       return element;
@@ -137,6 +139,7 @@ const Mane = () => {
       border-color: blue;
     `,
     "my-button": `
+      cursor: pointer;
       padding: 5px 10px;
       margin: 5px;
       font-weight: 600;
@@ -147,6 +150,9 @@ const Mane = () => {
     "my-button:hover": `
       color: #eee;
       background-color: #333;
+    `,
+    "counter-button": `
+      width: 80px;
     `
   }
 
